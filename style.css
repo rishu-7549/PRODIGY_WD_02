@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: 'Cambria, Cochin, Georgia, Times, "Times New Roman", serif';
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+.outerCircle {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: whitesmoke;
+}
+
+.animation-bg {
+  background: linear-gradient(
+    -45deg,
+    #ee7752,
+    rgb(236, 168, 42),
+    rgb(216, 216, 16),
+    rgb(104, 217, 104),
+    rgba(230, 11, 11, 0.982),
+    rgba(3, 137, 255, 0.801),
+    #23d5ab
+  );
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.innerCircle {
+  width: 230px;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.text {
+  color: white;
+}
+
+.minute {
+  font-size: 45px;
+}
+
+.sec {
+  font-size: 35px;
+}
+
+.msec {
+  font-size: 25px;
+}
+
+.button-wrap {
+  width: 250px;
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(194, 190, 186, 0.482);
+  color: black;
+}
+
+.laps {
+  list-style: none;
+  color: black;
+  font-variant: bold;
+  font-style: italic;
+  width: 250px;
+  height: 250px;
+  overflow: auto;
+  position: relative;
+  margin-top: 30px;
+}
+
+.laps::-webkit-scrollbar {
+  display: none;
+}
+
+.lap-item {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 50px;
+  margin-bottom: 15px;
+}
+
+.stamp {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.lap-clear-button {
+  position: fixed;
+  z-index: 1000;
+  bottom: 35px;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  width: 130px;
+  padding: 10px 0;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}
